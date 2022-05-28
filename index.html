@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather App</title>
+    <link rel="stylesheet" href="src/style.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="content">
+        <h1>• weather forecast •</h1>
+        <hr />
+        <form class="city-form" id="search-form">
+          <input
+            class="enter-city"
+            type="text"
+            placeholder="enter a city here"
+            id="search-text"
+          />
+          <button class="city-button">Search</button>
+          <br />
+          <button class="current-button" id="current-button">
+            Current location
+          </button>
+        </form>
+        <div class="current">
+          <h2></h2>
+
+          <div class="row">
+            <div class="col">
+              <div class="date" id="date"></div>
+
+              <div class="description" id="temp-description"></div>
+            </div>
+            <div class="col">
+              <div class="temperature">
+                <!-- ⛅ -->
+                <span id="current-temp"></span>
+                °C
+                <!-- |
+            <a
+              href="#"
+              class="text-decoration-none link-success"
+              id="fahrenheit"
+            >
+              °F</a
+            > -->
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col">
+              <ul class="otherElements">
+                <li>
+                  <strong> Humidity</strong>: <span id="humidity"></span>% /
+                </li>
+                <li><strong> Wind</strong>: <span id="wind"></span> km/h</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="weather">
+          <div class="row">
+            <div class="col">Thu</div>
+            <div class="col">Fri</div>
+            <div class="col">Sat</div>
+            <div class="col">Sun</div>
+            <div class="col">Mon</div>
+          </div>
+          <div class="row weather-emoji">
+            <div class="col">⛅</div>
+            <div class="col">☀</div>
+            <div class="col">☀</div>
+            <div class="col">☁️</div>
+            <div class="col">⛅</div>
+          </div>
+          <div class="row">
+            <div class="col">10°C</div>
+            <div class="col">15°C</div>
+            <div class="col">18°C</div>
+            <div class="col">13°C</div>
+            <div class="col">13°C</div>
+          </div>
+        </div>
+        <hr />
+      </div>
+      <footer>Coded by Małgorzata Wajs</footer>
+    </div>
+    <script src="src/script.js"></script>
+  </body>
+</html>
