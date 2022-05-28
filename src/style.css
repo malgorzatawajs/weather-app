@@ -118,6 +118,19 @@ li {
   color: #4b6642;
 }
 
+.gitHubLink {
+  text-decoration: none;
+  color: #4b6642;
+}
+
+.gitHubLink:hover {
+  color: #354230;
+}
+
+.gitHubLink:visited {
+  color: #4b6642;
+}
+
 footer {
   text-align: center;
   font-size: 17px;
