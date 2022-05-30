@@ -27,13 +27,12 @@
             id="search-text"
           />
           <button class="city-button">Search</button>
-          <br />
           <button class="current-button" id="current-button">
             Current location
           </button>
         </form>
         <div class="current">
-          <h2></h2>
+          <h2 class="city"></h2>
 
           <div class="row">
             <div class="col">
@@ -42,19 +41,19 @@
               <div class="description" id="temp-description"></div>
             </div>
             <div class="col">
-              <div class="temperature">
+              <span class="temperature">
                 <!-- ⛅ -->
                 <span id="current-temp"></span>
-                °C
-                <!-- |
-            <a
-              href="#"
-              class="text-decoration-none link-success"
-              id="fahrenheit"
-            >
-              °F</a
-            > -->
-              </div>
+              </span>
+              <span class="conversion"
+                >°C |
+                <a
+                  href="#"
+                  class="text-decoration-none link-success"
+                  id="fahrenheit"
+                  >°F</a
+                >
+              </span>
             </div>
           </div>
 
@@ -70,7 +69,7 @@
           </div>
         </div>
         <div class="weather">
-          <div class="row">
+          <div class="row weekdays">
             <div class="col">Thu</div>
             <div class="col">Fri</div>
             <div class="col">Sat</div>

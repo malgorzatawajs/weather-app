@@ -1,6 +1,6 @@
 .content {
   text-align: center;
-  margin: 50px 150px 10px 150px;
+  margin: 50px 200px 10px 200px;
   background: rgb(248, 237, 227);
   background: linear-gradient(
     180deg,
@@ -9,8 +9,7 @@
   );
   color: #222831;
   padding: 13px;
-  margin-top: 20px;
-  border-radius: 50px;
+  border-radius: 30px;
   border: 1px solid #6c8861;
 }
 
@@ -28,7 +27,8 @@
 
 h1 {
   font-family: monospace;
-  letter-spacing: 10px;
+  letter-spacing: 7px;
+  opacity: 30%;
 }
 
 .city-form {
@@ -44,24 +44,24 @@ h1 {
   border: 0;
   background-color: #798777;
   padding: 5px 15px;
-  box-shadow: 5px 5px 15px #e1dcbf;
+  box-shadow: 5px 5px 15px #dee0dd;
   margin-left: 10px;
   color: #fff;
 }
 
 .city-button:hover {
   cursor: pointer;
-  background-color: #bdd2b6;
+  background-color: #97aa91;
 }
 
 .current-button {
   transition: all 200ms ease-in-out;
   border-radius: 50px;
   border: 0;
-  font-size: 13px;
+  font-size: 11px;
   background-color: #91ac88;
   padding: 5px 15px;
-  box-shadow: 5px 5px 15px #e1dcbf;
+  box-shadow: 5px 5px 15px #dee0dd;
   margin-left: 10px;
   color: #fff;
   margin-top: 20px;
@@ -69,16 +69,17 @@ h1 {
 
 .current-button:hover {
   cursor: pointer;
-  background-color: #bdd2b6;
+  background-color: #acc2a5;
 }
 
 .current {
-  margin-left: 190px;
-  margin-right: 150px;
+  margin-left: 130px;
+  margin-right: 90px;
   font-size: 15px;
 }
 
-h2 {
+.city {
+  font-weight: 900;
   padding-top: 30px;
   text-align: left;
 }
@@ -93,13 +94,23 @@ h2 {
 }
 
 .temperature {
-  font-size: 45px;
+  font-size: 55px;
+  font-weight: 500;
+  line-height: 45px;
+}
+
+.conversion {
+  font-size: 20px;
+  position: relative;
+  top: -24px;
+  left: -13px;
 }
 
 .otherElements {
   padding-bottom: 20px;
   font-size: 13px;
-  margin-left: 130px;
+  margin-left: 150px;
+  padding-top: 5px;
   font-variant: small-caps;
 }
 
@@ -109,9 +120,13 @@ li {
 
 .weather {
   max-width: 600px;
-  margin-left: 90px;
-  font-size: 25px;
+  margin-left: 35px;
+  font-size: 20px;
   padding-bottom: 10px;
+}
+
+.weekdays {
+  font-weight: 600;
 }
 
 .weather-emoji {
