@@ -93,6 +93,14 @@ h1 {
   text-align: left;
 }
 
+.current-weather {
+  margin-left: -140px;
+}
+
+.icon {
+  width: 80px;
+}
+
 .temperature {
   font-size: 55px;
   font-weight: 500;
