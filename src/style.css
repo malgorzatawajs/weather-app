@@ -7,7 +7,6 @@
     rgb(238, 234, 220, 0.8) 62%,
     rgb(163, 177, 138, 0.8) 100%
   );
-  color: #222831;
   padding: 13px;
   border-radius: 30px;
   border: 1px solid #6c8861;
@@ -114,6 +113,15 @@ h1 {
   left: -13px;
 }
 
+.conversion .active {
+  color: #030100;
+  cursor: default;
+}
+
+.conversion .active:hover {
+  text-decoration: none;
+}
+
 .otherElements {
   padding-bottom: 20px;
   font-size: 13px;
@@ -141,17 +149,13 @@ li {
   color: #4b6642;
 }
 
-.gitHubLink {
+.link {
   text-decoration: none;
   color: #4b6642;
 }
 
-.gitHubLink:hover {
+.link:hover {
   color: #354230;
-}
-
-.gitHubLink:visited {
-  color: #4b6642;
 }
 
 footer {
