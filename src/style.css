@@ -1,6 +1,7 @@
 .content {
   text-align: center;
-  margin: 50px 200px 10px 200px;
+  margin: 50px auto;
+  max-width: 800px;
   background: rgb(248, 237, 227);
   background: linear-gradient(
     180deg,
