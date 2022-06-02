@@ -1,8 +1,7 @@
 .content {
   text-align: center;
-  margin: 50px auto;
-  max-width: 800px;
-  background: rgb(248, 237, 227);
+  margin: 40px auto;
+  max-width: 700px;
   background: linear-gradient(
     180deg,
     rgb(238, 234, 220, 0.8) 62%,
@@ -29,13 +28,6 @@ h1 {
   font-family: monospace;
   letter-spacing: 7px;
   opacity: 30%;
-}
-
-.city-form {
-  text-align: center;
-}
-.enter-city {
-  max-width: 200px;
 }
 
 .city-button {
@@ -73,28 +65,29 @@ h1 {
 }
 
 .current {
-  margin-left: 130px;
-  margin-right: 90px;
+  margin: 0 auto;
+  max-width: 430px;
+}
+
+.current-city {
   font-size: 15px;
+  float: left;
+  text-align: left;
+  padding-top: 30px;
+  padding-left: 0;
 }
 
 .city {
   font-weight: 900;
-  padding-top: 30px;
-  text-align: left;
 }
 
 .description {
-  text-align: left;
   font-variant: small-caps;
 }
 
-.date {
-  text-align: left;
-}
-
 .current-weather {
-  margin-left: -140px;
+  text-align: right;
+  padding-top: 30px;
 }
 
 .icon {
@@ -110,7 +103,7 @@ h1 {
 .conversion {
   font-size: 20px;
   position: relative;
-  top: -24px;
+  top: -22px;
   left: -13px;
 }
 
@@ -126,20 +119,24 @@ h1 {
 .otherElements {
   padding-bottom: 20px;
   font-size: 13px;
-  margin-left: 150px;
-  padding-top: 5px;
   font-variant: small-caps;
+  position: relative;
+  left: -13px;
 }
 
 li {
+  list-style: none;
+}
+
+.inline {
   display: inline;
 }
 
 .weather {
-  max-width: 600px;
-  margin-left: 35px;
   font-size: 20px;
   padding-bottom: 10px;
+  max-width: 600px;
+  margin: 0 auto;
 }
 
 .weekdays {
@@ -161,6 +158,6 @@ li {
 
 footer {
   text-align: center;
-  font-size: 17px;
+  font-size: 14px;
   font-family: monospace;
 }

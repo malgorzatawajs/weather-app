@@ -19,52 +19,52 @@
       <div class="content">
         <h1>• weather forecast •</h1>
         <hr />
-        <form class="city-form" id="search-form">
-          <input
-            class="enter-city"
-            type="text"
-            placeholder="enter a city here"
-            id="search-text"
-          />
+        <form id="search-form">
+          <input type="text" placeholder="enter a city here" id="search-text" />
           <button class="city-button">Search</button>
           <button class="current-button" id="current-button">
             Current location
           </button>
         </form>
         <div class="current">
-          <h2 class="city"></h2>
-
-          <div class="row">
-            <div class="col">
-              <div class="date" id="date"></div>
-
+          <ul class="current-city">
+            <li>
+              <h2 class="city"></h2>
+            </li>
+            <li>
+              <small>updated:</small>
+              <span id="date"></span>
+            </li>
+            <li>
               <div class="description" id="temp-description"></div>
-            </div>
-            <div class="col current-weather">
+            </li>
+          </ul>
+
+          <ul class="current-weather">
+            <li>
               <span class="temperature">
                 <img src="" id="icon" class="icon" /><span
                   id="current-temp"
                 ></span>
               </span>
+
               <span class="conversion"
                 ><a href="#" id="celsius-link" class="link active">°C</a>
                 |
                 <a href="#" class="link" id="fahrenheit-link">°F</a>
               </span>
-            </div>
-          </div>
-
-          <div class="row">
-            <div class="col">
-              <ul class="otherElements">
-                <li>
-                  <strong> Humidity</strong>: <span id="humidity"></span>% /
-                </li>
-                <li><strong> Wind</strong>: <span id="wind"></span> km/h</li>
-              </ul>
-            </div>
-          </div>
+            </li>
+            <ul class="otherElements">
+              <li class="inline">
+                <strong> Humidity</strong>: <span id="humidity"></span>% /
+              </li>
+              <li class="inline">
+                <strong> Wind</strong>: <span id="wind"></span> km/h
+              </li>
+            </ul>
+          </ul>
         </div>
+
         <div class="weather">
           <div class="row weekdays">
             <div class="col">Thu</div>
@@ -89,13 +89,13 @@
           </div>
         </div>
         <hr />
+        <footer>
+          Coded by
+          <a class="link" href="https://github.com/malgorzatawajs"
+            >Małgorzata Wajs</a
+          >
+        </footer>
       </div>
-      <footer>
-        Coded by
-        <a class="link" href="https://github.com/malgorzatawajs"
-          >Małgorzata Wajs</a
-        >
-      </footer>
     </div>
     <script src="src/script.js"></script>
   </body>
