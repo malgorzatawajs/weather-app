@@ -26,6 +26,31 @@ let date = document.querySelector("#date");
 
 date.innerHTML = formatDate(now);
 
+// forecast
+
+function displayForecast() {
+  let forecastElement = document.querySelector("#forecast");
+
+  let forecastHTML = `<div class="row">`;
+
+  let days = ["Thu", "Fri", "Sat", "Sun", "Mon"];
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      `<div class="col">
+              <div class="weather-forecast-date">${day}</div>
+              <div class="weather-forecast-emoji">⛅</div>
+              <div class="weather-forecast-temp">
+                <span class="weather-forecast-temp-max">10°</span>
+                <span class="weather-forecast-temp-min">1°</span>
+              </div>
+            </div>`;
+  });
+
+  forecastHTML = forecastHTML + `</div>`;
+  forecastElement.innerHTML = forecastHTML;
+}
+
 // search button
 
 function displayWeatherCondition(response) {
@@ -77,6 +102,7 @@ let currentLocationButton = document.querySelector("#current-button");
 currentLocationButton.addEventListener("click", getCurrentLocation);
 
 searchCity("New York");
+displayForecast();
 
 // temperature conversion
 
