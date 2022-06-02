@@ -1,13 +1,5 @@
 function formatDate(date) {
-  let days = [
-    "Sunday",
-    "Monday",
-    "Tuesday",
-    "Wednesday",
-    "Thursday",
-    "Friday",
-    "Saturday",
-  ];
+  let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
   let day = days[date.getDay()];
   let hours = date.getHours();
   if (hours < 10) {
@@ -28,23 +20,42 @@ date.innerHTML = formatDate(now);
 
 // forecast
 
-function displayForecast() {
+function formatDay(timestamp) {
+  let date = new Date(timestamp * 1000);
+  let day = date.getDay();
+  let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+  return days[day];
+}
+
+function displayForecast(response) {
+  let forecast = response.data.daily;
   let forecastElement = document.querySelector("#forecast");
 
   let forecastHTML = `<div class="row">`;
 
-  let days = ["Thu", "Fri", "Sat", "Sun", "Mon"];
-  days.forEach(function (day) {
-    forecastHTML =
-      forecastHTML +
-      `<div class="col">
-              <div class="weather-forecast-date">${day}</div>
-              <div class="weather-forecast-emoji">⛅</div>
+  forecast.forEach(function (forecastDay, index) {
+    if (index < 5) {
+      forecastHTML =
+        forecastHTML +
+        `<div class="col">
+              <div class="weather-forecast-date">${formatDay(
+                forecastDay.dt
+              )}</div>
+              <div class="weather-forecast-emoji">
+              <img src="https://openweathermap.org/img/wn/${
+                forecastDay.weather[0].icon
+              }@2x.png" width="60"/>
+              </div>
               <div class="weather-forecast-temp">
-                <span class="weather-forecast-temp-max">10°</span>
-                <span class="weather-forecast-temp-min">1°</span>
+                <span class="weather-forecast-temp-max">${Math.round(
+                  forecastDay.temp.max
+                )}°</span>
+                <span class="weather-forecast-temp-min">${Math.round(
+                  forecastDay.temp.min
+                )}°</span>
               </div>
             </div>`;
+    }
   });
 
   forecastHTML = forecastHTML + `</div>`;
@@ -52,6 +63,12 @@ function displayForecast() {
 }
 
 // search button
+
+function getForecast(coordinates) {
+  let apiKey = "08d9972d890a9581fcef3b5378c8d3d6";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=metric`;
+  axios.get(apiUrl).then(displayForecast);
+}
 
 function displayWeatherCondition(response) {
   document.querySelector("h2").innerHTML = response.data.name;
@@ -70,6 +87,8 @@ function displayWeatherCondition(response) {
     "src",
     `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
   );
+
+  getForecast(response.data.coord);
 }
 
 function searchCity(city) {
@@ -102,7 +121,6 @@ let currentLocationButton = document.querySelector("#current-button");
 currentLocationButton.addEventListener("click", getCurrentLocation);
 
 searchCity("New York");
-displayForecast();
 
 // temperature conversion
 
