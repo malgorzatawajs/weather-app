@@ -132,19 +132,28 @@ li {
   display: inline;
 }
 
-.weather {
+.weather-forecast {
   font-size: 20px;
   padding-bottom: 10px;
   max-width: 600px;
   margin: 0 auto;
 }
 
-.weekdays {
+.weather-forecast-date {
   font-weight: 600;
+  opacity: 0.9;
 }
 
-.weather-emoji {
+.weather-forecast-emoji {
   color: #4b6642;
+}
+
+.weather-forecast-temp {
+  font-size: 17px;
+}
+
+.weather-forecast-temp-min {
+  opacity: 0.6;
 }
 
 .link {
