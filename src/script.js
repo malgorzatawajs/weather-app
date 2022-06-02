@@ -72,9 +72,9 @@ function getForecast(coordinates) {
 
 function displayWeatherCondition(response) {
   document.querySelector("h2").innerHTML = response.data.name;
-  celsiusTemperature = response.data.main.temp;
-  document.querySelector("#current-temp").innerHTML =
-    Math.round(celsiusTemperature);
+  document.querySelector("#current-temp").innerHTML = Math.round(
+    response.data.main.temp
+  );
   document.querySelector("#humidity").innerHTML = response.data.main.humidity;
   document.querySelector("#wind").innerHTML = Math.round(
     response.data.wind.speed
@@ -121,30 +121,3 @@ let currentLocationButton = document.querySelector("#current-button");
 currentLocationButton.addEventListener("click", getCurrentLocation);
 
 searchCity("New York");
-
-// temperature conversion
-
-function displayFahrenheitTemperature(event) {
-  event.preventDefault();
-  let currentTemp = document.querySelector("#current-temp");
-  celsiusLink.classList.remove("active");
-  fahrenheitLink.classList.add("active");
-  let fahrenheitTemperature = Math.round((celsiusTemperature * 9) / 5 + 32);
-  currentTemp.innerHTML = fahrenheitTemperature;
-}
-
-let celsiusTemperature = null;
-
-let fahrenheitLink = document.querySelector("#fahrenheit-link");
-fahrenheitLink.addEventListener("click", displayFahrenheitTemperature);
-
-function displayCelsiusTemperature(event) {
-  event.preventDefault();
-  fahrenheitLink.classList.remove("active");
-  celsiusLink.classList.add("active");
-  let currentTemp = document.querySelector("#current-temp");
-  currentTemp.innerHTML = Math.round(celsiusTemperature);
-}
-
-let celsiusLink = document.querySelector("#celsius-link");
-celsiusLink.addEventListener("click", displayCelsiusTemperature);

@@ -100,20 +100,11 @@ h1 {
   line-height: 45px;
 }
 
-.conversion {
+.celsius {
   font-size: 20px;
   position: relative;
-  top: -22px;
+  top: -23px;
   left: -13px;
-}
-
-.conversion .active {
-  color: #030100;
-  cursor: default;
-}
-
-.conversion .active:hover {
-  text-decoration: none;
 }
 
 .other-elements {
